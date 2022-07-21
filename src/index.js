@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Webcontent from "./App";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render( < Webcontent / > , document.getElementById('root'))
+
+
+const open_menu = document.querySelector('.open-menu');
+const menu = document.querySelector('.menu');
+const open_icon = document.querySelector('.open-menu .open');
+const close_icon = document.querySelector('.open-menu .close');
+
+
+open_menu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    open_icon.classList.toggle('active');
+})
